@@ -1,5 +1,5 @@
 ![](bert.png)
-
+![](https://github.com/bjleah/NLP/blob/main/nlp-mindmap/bert.jpg)
 <img src="https://github.com/bjleah/NLP/blob/main/nlp-mindmap/bert.png" width="200" height="200" alt="抖音小程序"/><br/>
 
 ![](https://github.com/bjleah/NLP/raw/main/nlp-mindmap/%E5%8F%A5%E6%B3%95%E5%88%86%E6%9E%90.png)
