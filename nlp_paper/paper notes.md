@@ -15,18 +15,17 @@
 &emsp;&emsp;&emsp;2）NN为每一个候选关系预测一个关系标签，并带有方向（除了负关系外，negative relation）<br />
 
 **2、论文《Joint Extraction of Entities and Relations Based on a Novel Tagging Scheme》笔记：** <br />
-**(1)模型结构图**<br />
+&emsp;&emsp;**(1)模型结构图**<br />
 ![image](https://img2022.cnblogs.com/blog/2603071/202206/2603071-20220606174709564-1805285240.png)
-
-**(2)模型结构说明**<br />
-&emsp;&emsp;编码：双向lstm进行序列编码<br />
+&emsp;&emsp;**(2)模型结构说明**<br />
+&emsp;&emsp;编码：双向lstm进行序列编码 <br />
 &emsp;&emsp;解码：改进lstm解码（LSTMd）<br />
 &emsp;&emsp;预测标签：<br />
-![image](https://img2022.cnblogs.com/blog/2603071/202206/2603071-20220606174850133-2127802176.png)
+![image](https://img2022.cnblogs.com/blog/2603071/202206/2603071-20220606180826703-1240490797.png)
 
 &emsp;&emsp;(1) 实体中词的位置信息 { B，I，E，S，O } 分别表示{实体开始，实体内部，实体结束，单个实体，无关词}；<br />
 &emsp;&emsp;(2) 实体关系类型信息，需根据关系类型进行标记，分为多个类别，如 { CF，CP，… } ；<br />
 &emsp;&emsp;(3) 实体角色信息 { 1，2 } 分别表示 { 实体 1，实体 2 }<br />
 
-**(3)缺点**<br />
+&emsp;&emsp;**(3)缺点**<br />
 &emsp;&emsp;不能识别重叠的实体关系<br />
