@@ -7,9 +7,9 @@
 &emsp;&emsp;**（5）依存结构树例：**<br />
 ![image](https://img2022.cnblogs.com/blog/2603071/202206/2603071-20220606114528953-880470618.webp)<br />
 &emsp;&emsp;根据支配与被支配关系建立后，就当前LSTM需要将其倒置，然后根据先后顺序计算。<br />
-&emsp;&emsp;**（6）模型两个任务：**任务一：基于bi-lstm的实体识别（序列标注：BIL(last)OU）；关系分类-两个L标签的实体或U标签实体（双向LSTM树结构）；<br />
-&emsp;&emsp;**任务一：**数据输入：词性embedding+词embedding，输出：实体识别标注序列<br />
-&emsp;&emsp;**任务二：**数据输入：实体1的embedding（任务一的sequence输出）+ 依存关系类别embedding +对应实体预测得到的标签embedding<br />
-&emsp;&emsp;**目标词对儿的三种表示结构：**1）SPTree（最短路径结构)；2）SubTree（最近公共祖先）；3）Full-Tree（整棵依存树）one node type:采用SPTree<br />
+&emsp;&emsp;**（6）模型两个任务：** 任务一：基于bi-lstm的实体识别（序列标注：BIL(last)OU）；关系分类-两个L标签的实体或U标签实体（双向LSTM树结构）；<br />
+&emsp;&emsp;**任务一：** 数据输入：词性embedding+词embedding，输出：实体识别标注序列<br />
+&emsp;&emsp;**任务二：** 数据输入：实体1的embedding（任务一的sequence输出）+ 依存关系类别embedding +对应实体预测得到的标签embedding<br />
+&emsp;&emsp;**目标词对儿的三种表示结构：** 1）SPTree（最短路径结构)；2）SubTree（最近公共祖先）；3）Full-Tree（整棵依存树）one node type:采用SPTree<br />
 &emsp;&emsp;1）对于两个带有L或U标签（BILOU schema）的词，可以构建一个候选的关系<br />
 &emsp;&emsp;2）NN为每一个候选关系预测一个关系标签，并带有方向（除了负关系外，negative relation）<br />
